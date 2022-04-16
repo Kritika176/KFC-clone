@@ -27,7 +27,8 @@ export  function Signup() {
           console.log(res.data.username)
           if(res.data.username)
           {
-              navigate("/login")
+              console.log(res.data.username)
+              navigate("/signin")
           }
           else{
               alert("User already exists")
