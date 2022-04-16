@@ -16,7 +16,7 @@ export  function Signup() {
         const name = e.target.name;
         const value = e.target.value
        setUser({...user,[name]:value})
-       console.log(user)
+     
     }
     
     const handleSubmit = (e) =>{
@@ -24,10 +24,10 @@ export  function Signup() {
          axios.post(("http://localhost:8800/signup"),
              user
          ).then((res) =>{
-          console.log(res.data.username)
+          console.log(res.data)
           if(res.data.username)
           {
-              console.log(res.data.username)
+             
               navigate("/signin")
           }
           else{
