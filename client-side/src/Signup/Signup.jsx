@@ -1,10 +1,12 @@
-import React from 'react'
+
 import { useState } from 'react';
 import axios from 'axios';
 import {  useNavigate } from 'react-router-dom';
 import "./signup.css"
 export  function Signup() {
 
+    
+   
     const [user,setUser] = useState({
         username:"",
         email:"",
@@ -30,9 +32,13 @@ export  function Signup() {
              
               navigate("/signin")
           }
-          else{
-              alert("User already exists")
+          else if(res.data === "User already exists"){
+              return(alert("Email already exists"))
           }
+          
+           return(alert("Password is not strong"))
+               
+          
       }).catch((err) => console.log(err))
       }
   return (
@@ -46,9 +52,8 @@ export  function Signup() {
                     <div className='align'><span className='signinPara' >LET'S SIGNUP</span></div>
 					<input type="text" name="username" placeholder="Username" onChange={createUser} />
 					<input type="email" name="email" placeholder="Email" onChange={createUser}/>
-					<input type="password" name="password" placeholder="Password" onChange={createUser}/>
-                    <p className='passwordAlert'>Password must contain atleast 1 lowercase[a-z],1[uppercase[A-Z], symbol and a numeric value. </p>
-                    <button type={"submit"} disabled={!user.username || !user.email || !user.password}  >SIGN UP</button>
+			<input type="password" name="password" placeholder="Password" onChange={createUser}/>
+            <button type={"submit"} disabled={!user.username || !user.email || !user.password}  >SIGN UP</button>
 				</form>
                
 			</div>
