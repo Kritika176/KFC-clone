@@ -87,3 +87,7 @@ button:hover{
     font-size: larger;
     
 }
+.passwordAlert{
+	color:crimson;
+	text-align: center;
+}

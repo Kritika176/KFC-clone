@@ -47,6 +47,7 @@ export  function Signup() {
 					<input type="text" name="username" placeholder="Username" onChange={createUser} />
 					<input type="email" name="email" placeholder="Email" onChange={createUser}/>
 					<input type="password" name="password" placeholder="Password" onChange={createUser}/>
+                    <p className='passwordAlert'>Password must contain atleast 1 lowercase[a-z],1[uppercase[A-Z], symbol and a numeric value. </p>
                     <button type={"submit"} disabled={!user.username || !user.email || !user.password}  >SIGN UP</button>
 				</form>
                
