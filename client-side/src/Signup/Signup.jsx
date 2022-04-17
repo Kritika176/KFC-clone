@@ -36,7 +36,11 @@ export  function Signup() {
               return(alert("Email already exists"))
           }
           
-           return(alert("Password is not strong"))
+          else{
+            return(alert("Password is not strong it must contain atleast 1[a-z],1[A-Z],1 numeric value ans 1 symbol"))
+                
+           }
+         
                
           
       }).catch((err) => console.log(err))
