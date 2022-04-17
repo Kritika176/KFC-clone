@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route,Routes } from 'react-router-dom';
+import { Home } from '../Home/Home';
 import { Signin } from '../Signin/Signin';
 import { Signup } from "../Signup/Signup"
 
@@ -8,6 +9,7 @@ export function AllRoutes() {
     <Routes>
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='/signin' element={<Signin></Signin>}></Route>
+        <Route path='/' element={<Home></Home>}></Route>
     </Routes>
   )
 }
